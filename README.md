@@ -29,7 +29,10 @@ Personal photos and videos automation.
     git clone https://github.com/jmathai/elodie.git
     cd elodie
     pip install -r requirements.txt
+    mkdir ~/.elodie
+    cp config.ini-sample ~/.elodie/config.ini
     ```
-7. 
+7.  Elodie requires a mapquest api key in order to geocode photos and videos. Register to mapquest and insert your api key in ~/.elodie/config.ini https://developer.mapquest.com/plan_purchase/steps/business_edition/business_edition_free/register
+
 
 
