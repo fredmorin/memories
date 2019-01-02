@@ -18,7 +18,7 @@ Personal photos and videos automation.
     ```
 5. Mount NAS
     ```
-    sudo mount //192.168.0.154/Download mnt/nas -t cifs -o user=admin,uid=$(id -u),gid=$(id -g),forceuid,forcegid
+    sudo mount //192.168.0.154/home mnt/nas -t cifs -o user=admin,uid=$(id -u),gid=$(id -g),forceuid,forcegid
     ```
 6. Setup elodie https://github.com/jmathai/elodie
 
@@ -33,6 +33,20 @@ Personal photos and videos automation.
     cp config.ini-sample ~/.elodie/config.ini
     ```
 7.  Elodie requires a mapquest api key in order to geocode photos and videos. Register to mapquest and insert your api key in ~/.elodie/config.ini https://developer.mapquest.com/plan_purchase/steps/business_edition/business_edition_free/register
+
+# Import medias
+1. Create folders
+    ``` 
+    mkdir ~/mnt/nas/memories
+    mkdir ~/mnt/nas/imported    
+    ```
+2. Import existing medias in memories and move old files to imported. (or to trash)
+    ```
+    ./elodie/elodie.py import --source ~/mnt/nas/Londres ~/mnt/nas/memories
+    mv ~/mnt/nas/Londre ~/mnt/nas/imported
+    ```
+
+
 
 
 
