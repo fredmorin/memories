@@ -40,10 +40,12 @@ Personal photos and videos automation.
     mkdir ~/mnt/nas/memories
     mkdir ~/mnt/nas/imported    
     ```
-2. Import existing medias in memories and move old files to imported. (or to trash)
+2. Import existing medias in memories
+    - elodies modifies the original file during the import process (bug). Workaround:
     ```
-    ./elodie/elodie.py import --source ~/mnt/nas/Londres ~/mnt/nas/memories
-    mv ~/mnt/nas/Londre ~/mnt/nas/imported
+    mv folder_to_be_imported imported_folder/
+    cp -r imported_foder/folder_to_be_imported importing_folder/
+    ./elodie/elodie.py import --source importing_folder/folder_to_be_imported ~/mnt/nas/memories --trash
     ```
 
 
